@@ -1,91 +1,74 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Signup</title>
+	<link rel="stylesheet" href="../model/style.css">
+	<script type="text/javascript">
+    function validate(){
+    var name= document.forms["myForm"]["username"].value;
+    if (name == "") {
+   alert("Name must be filled out");
+   return false;
+   }
+
+  var password= document.forms["myForm"]["password"].value;
+  if (password == "") {
+			   alert("password must be filled out");
+			  return false;
+			}
+  var email= document.forms["myForm"]["email"].value;
+  if (email == "") {
+			   alert("Email must be filled out");
+			 return false;
+			}
+}
+ </script>
+	
 </head>
-<style>
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=password], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-input[type=submit]:hover {
-  background-color: #3CBC8D;
-}
-</style>
 <body>
-	<form method="post" action="../controller/signupCheck.php">
+	<form name="myForm" action="../controller/signupcheck.php" onsubmit="return validate()" method="post">
 		<fieldset>
-			<legend>SIGNUP</legend>
+		     <legend>SIGNUP</legend>
+			
 			<table>
 				<tr>
+					
 					<td>Username:</td>
-					<td><input type="text" name="username" value=""></td>
-					<span class="error">* <?php echo $nameErr;?></span>
+					<td><input type="text" name="username"></td>
+					
 				</tr>
 				<tr>
+					
 					<td>Password:</td>
-					<td><input type="password" name="password" value=""></td>
+					<td><input type="password" name="password"></td>
+					
 				</tr>
 				<tr>
-					<td>Comfirm Password:</td>
-					<td><input type="password" name="comfirmpassword" value=""></td>
-				</tr>
-				<tr>
+					
 					<td>Email:</td>
-					<td><input type="email" name="email" value=""></td>
+					<td><input id="email" type="email" name="email"></td>
+					
 				</tr>
 				<tr>
-				    <td>User Type: </td>
-		            <td><input type="radio" name="type" value=""> Property Owner </td>
-                <tr/>
+					
+					<td>Gender</td>
+					<td>
+						
+							<label><input type="radio" name="gender" value="male"> Male</label>
+							<label><input type="radio" name="gender" value="female"> Female</label>
+			
+					</td>
+				  </tr>
 				<tr>
-					<td></td>
+					<td>
+					
+					</td>
 					<td><input type="submit" name="submit" value="Submit"></td>
 				</tr>
-				
 			</table>
 		</fieldset>
-		<P> If already signup !
+		<P> If You Already  signup !
                 <a href="login.html"> Click Here </a>
 	</form>
-	
 </body>
 </html>
