@@ -1,5 +1,5 @@
 <?php 
-	//session_start();
+	
 	require_once('../model/usersModel.php');
 
 	if(isset($_POST['submit'])){
@@ -23,7 +23,6 @@
                     $status = addUser($user);
 
 
-
                     if($status){
 
                         header('location: ../views/login.html');
@@ -35,8 +34,6 @@
                             echo "try again...";
 
                         }
-
-               
 
                 }else{
 

@@ -1,48 +1,21 @@
 <?php 
 
+	require_once('../model/contactRequest.php');
 
-	if(isset($_POST['submit'])){
+	$username = $_REQUEST['username'];
+	$number = $_REQUEST['number'];
+	$email = $_REQUEST['email'];
+	$subject = $_REQUEST['subject'];
+	$meassage = $_REQUEST['meassage'];
+	//$id = $_REQUEST['id'];
 
-		$username 	= $_POST['username'];
-		$number 	= $_POST['number'];
-		$email      = $_POST['email'];
-		$subject 	= $_POST['subject'];
-		$meassage	= $_POST['meassage'];
-		
+	$user = ['username'=> $username, 'number'=>$number, 'email'=>$email, 'subject'=>$subject, 'meassage'=>$meassage];
+	$status = addUser($user);
 
-		if($username != ""){
-			if($number != ""){ 
-				if($email !=""){
-					if($subject !=""){
-						if($meassage !=""){
-						
-							
-					        $myfile = fopen('../model/contactRequest.txt', 'a');
-				            $myuser = $username."|".$number."|".$email."|".$subject."|".$meassage."\r\n";
-					        fwrite($myfile, $myuser);
-					        fclose($myfile);
-
-					        //header('location:../views/login.html');
-				        
-			            }else{
-				        echo "invalid massage....";
-			            }
-		            }else{
-			        echo "invalid subject....";
-		            }
-		        }else{
-			    echo "invalid email....";
-	            }
-	        }else{
-	        echo "invalid number....";
-	        }
-		}else{
-	        echo "invalid username....";
-	        }	
+	if($status){
+		echo "submited..!";
+		//header('location: ../views/userlist.php');
 	}else{
-	echo "submited !....";
-	}	
-
-	
-     
+		header('location: ../views/contact_us.php?id={$id}');
+	}
 ?>

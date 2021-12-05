@@ -6,6 +6,32 @@ include 'header.php'
 <html>
 <head>
 	<title>Contact Us</title>
+	
+	<script type="text/javascript">
+    function validate(){
+    var username= document.forms["myForm"]["username"].value;
+    if (username == "") {
+   alert("Name must be filled out");
+   return false;
+   }
+
+  var number= document.forms["myForm"]["number"].value;
+  if (number == "") {
+			   alert("Number must be filled out");
+			  return false;
+			}
+  var email= document.forms["myForm"]["email"].value;
+  if (email == "") {
+			   alert("Email must be filled out");
+			 return false;
+			}
+	var meassage= document.forms["myForm"]["meassage"].value;
+  if (meassage == "") {
+			   alert("meassage must be filled out");
+			 return false;
+			}		
+}
+ </script>
 </head>
 <style>
 
@@ -56,7 +82,7 @@ input[type=submit]:hover {
 }
 </style>
 <body>
-	<form method="post" action="../controller/contactCheck.php">
+	<form name="myForm" action="../controller/contactCheck.php" onsubmit="return validate()" method="post">
 		<fieldset>
 			<legend>Contact Us</legend>
 			<table>
