@@ -6,7 +6,7 @@ include 'header.php'
 <html>
 <head>
 	<title>Contact Us</title>
-	
+	<link rel="stylesheet" href="../model/style.css">
 	<script type="text/javascript">
     function validate(){
     var username= document.forms["myForm"]["username"].value;
@@ -34,51 +34,8 @@ include 'header.php'
  </script>
 </head>
 <style>
-
-input[type=text], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=number], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=email], select {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-input[type=submit] {
-  width: 100%;
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-
-input[type=submit]:hover {
-  background-color: #3CBC8D;
+input[type=number], select { width: 100%; padding: 12px 20px; margin: 8px 0;
+  display: inline-block; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;
 }
 </style>
 <body>

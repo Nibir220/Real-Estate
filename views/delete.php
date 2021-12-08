@@ -1,22 +1,19 @@
 <?php 
-	
+	include('header.php');
 	require_once('../model/usersModel.php');
 
 	$id = $_REQUEST['id'];
-	//echo $id;
 	$user = getUserById($id);
-	//print_r($user);
+
 ?>
 
 <html>
 <head>
 	<title>delete user</title>
+	<link rel="stylesheet" href="../model/tableStyle.css">
 </head>
+<link rel="stylesheet" href="../model/tableStyle.css">
 <body>
-	<center>
-		<a href="home.php">Back </a> |
-		<a href="../controller/logout.php">logout </a>
-	</center>
 	
 	<form method="post" action="../controller/deleteUser.php">
 		<fieldset>
@@ -41,5 +38,13 @@
 			</table>
 		</fieldset>
 	</form>
+	<center>
+		<a href="home.php">Back </a> |
+		<a href="../controller/logout.php">logout </a>
+	</center>
 </body>
 </html>
+
+<?php
+    include('footer.php');
+?>

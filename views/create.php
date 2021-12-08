@@ -1,18 +1,36 @@
 <?php 
-	
+	include 'header.php'
 ?>
 
 <html>
 <head>
 	<title>Create New User </title>
+	<link rel="stylesheet" href="../model/style.css">
+	<script type="text/javascript">
+    function validate(){
+    var name= document.forms["myForm"]["username"].value;
+    if (name == "") {
+   alert("Name must be filled out");
+   return false;
+   }
+
+  var password= document.forms["myForm"]["password"].value;
+  if (password == "") {
+			   alert("password must be filled out");
+			  return false;
+			}
+  var email= document.forms["myForm"]["email"].value;
+  if (email == "") {
+			   alert("Email must be filled out");
+			 return false;
+			}
+}
+ </script>
 </head>
 <body>
-	<center>
-		<a href="home.php">Back </a> |
-		<a href="../controller/logout.php">logout </a>
-	</center>
 	
-	<form method="post" action="../controller/addUser.php">
+	
+	<form name="myForm" action="../controller/addUser.php" onsubmit="return validate()" method="post">
 		<fieldset>
 			<legend>Create New</legend>
 			<table>
@@ -35,6 +53,10 @@
 				</tr>
 			</table>
 		</fieldset>
+		<center>
+		<a href="home.php">Back </a> |
+		<a href="../controller/logout.php">logout </a>
+	</center>
 	</form>
 </body>
 </html>

@@ -14,12 +14,9 @@
 	<meta charset="utf-8">
 	<title>User List</title>
 </head>
+<link rel="stylesheet" href="../model/tableStyle.css">
 <body>
 
-	<center>
-		<a href="home.php">Back </a> |
-		<a href="../controller/logout.php">logout </a>
-	</center>
 
 	<table border="1" align="center">
 		<tr>
@@ -41,8 +38,12 @@
            
 	<?php } ?>
 	</table>
+	<center>
+		<a href="home.php">Back </a> |
+		<a href="../controller/logout.php">logout </a>
+	</center>
 </body>
 </html>
 <?php
-            include('footer.php');
-			?>
+    include('footer.php');
+?>
