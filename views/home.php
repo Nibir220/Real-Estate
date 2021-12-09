@@ -97,7 +97,7 @@ footer {
     Chick Your:
 	<a href="account_list.php">ACCOUNT </a> </br>
 	chick Your:
-	<a href="properties.html">UNDER CONSTRUCTION PROJECT </a>  </br>
+	<a href="uc_property.php">UNDER CONSTRUCTION PROJECT </a>  </br>
 	Chick Your:
 	<a href="my_property.php">MY PROJECT</a>  </br>
 	Add:
