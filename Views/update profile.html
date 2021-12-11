@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Profile</title>
+
+       <link rel="stylesheet" type="text/css" href="mystyle.css">
+   
+	<script type="text/javascript">
+    function validate(){
+    var name= document.forms["myForm"]["username"].value;
+    if (name == "") {
+   alert("Name must be filled out");
+   return false;
+   }
+
+  var password= document.forms["myForm"]["password"].value;
+  if (password == "") {
+			   alert("password must be filled out");
+			  return false;
+			}
+		   var email= document.forms["myForm"]["email"].value;
+		   if (email == "") {
+			   alert("Email must be filled out");
+			 return false;
+			}
+}
+ </script>
+	
+</head>
+<body>
+	<form name="myForm" action="../Controller/updateprofileCheck.php" onsubmit="return validate()" method="post">
+		<fieldset>
+			<legend><h1><font face="Bedrock" size="20" color="Black">Update Profile</font></h1></legend>
+			<table width="1000" bordercolor="Black" border="2" cellspacing="8" cellpadding="6">
+				<tr>
+					
+					<td>Username:</td>
+					<td><input type="text" name="username"></td>
+					
+				</tr>
+				<tr>
+					
+					<td>Password:</td>
+					<td><input type="password" name="password"></td>
+					
+				</tr>
+				<tr>
+					
+					<td>Email:</td>
+					<td><input id="email" type="email" name="email"></td>
+					
+				</tr>
+				<tr>
+					
+					<td>Gender</td>
+					<td>
+						
+							<label><input type="radio" name="gender" value="male"> Male</label>
+							<label><input type="radio" name="gender" value="female"> Female</label>
+			
+					</td>
+				  </tr>
+				<tr>
+					<td>
+					
+					</td>
+					<td><input type="submit" name="submit" value="Submit"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
+	<form>
+     <input type="button" value="Go back!" onclick="history.back()">
+        </form>
+</body>
+</html>

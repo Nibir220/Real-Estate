@@ -2,5 +2,5 @@
 
 
 
-header('location: Log in.php');
+header('location:Views/login.html');
 ?>
