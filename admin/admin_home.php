@@ -44,7 +44,7 @@ if($_SESSION["myusername"]=="")
 	$("ul.tabs li:first").addClass("active").show(); 
 	$(".tab_content:first").show(); 
 
-	//On Click Event
+	
 	$("ul.tabs li").click(function() {
 
 		$("ul.tabs li").removeClass("active"); 

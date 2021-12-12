@@ -27,12 +27,12 @@
 	);
 	$(document).ready(function() {
 
-	//When page loads...
+	
 	$(".tab_content").hide(); //Hide all content
 	$("ul.tabs li:first").addClass("active").show(); //Activate first tab
 	$(".tab_content:first").show(); //Show first tab content
 
-	//On Click Event
+	
 	$("ul.tabs li").click(function() {
 
 		$("ul.tabs li").removeClass("active"); //Remove any "active" class
@@ -95,7 +95,7 @@
       </ul>
 	  <footer>
 	    <hr />
-	    <p><strong>Copyright © 2011 Website Admin</strong></p>
+	    <p><strong>Copyright © 2021 Website Admin</strong></p>
 	    <p> </p>
       </footer>
 </aside>
@@ -112,7 +112,7 @@ $db_username = 'root';
 $db_password = '';
 $db_database = 'property';
 
-// Database Connection String
+
 $con = new mysqli($db_hostname,$db_username,$db_password);
 if (!$con)
   {

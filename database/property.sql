@@ -145,7 +145,7 @@ INSERT INTO `property` (`id_property`, `name_property`, `type_property`, `add1`,
 (4, 'appartmen pandan height', 'Condominium', 'lot 770 pandan perdana', '17000', '500,000.00', 'Negotiable', '79', '79', '79', '4', '3', '01111111111', '45.9', '30.9', 'viewing kl city'),
 (5, 'villa ameran', 'Bungalow House', 'lorong mad', '81900', '1000000.00', 'Negotiable', 'mutiara rini', '', '', '6', '8', '0123456789', '70', '70', ''),
 (6, 'azura villa', 'Bungalow House', 'lorong balakang rumah, sebelah masjid, jalan depan sikit, belah kanan', '', '123456.00', 'Negotiable', 'kubu kuat', '', '', '2', '', '', '', '', 'mere xde kawan dekat KL time raya'),
-(8, 'pandan villa bestari', 'Condominium', 'pandan indah', '15100', '540,000.00', 'Guide Price', 'pandan jaya', '56', '23.12', '5', '5', '0145091646', '345.8', '345.8', 'saya nak renovate rumah ni so macam mana saya nk buat or contact siapa tuk renovate rumah');
+(8, 'pandan villa', 'Condominium', 'pandan indah', '15100', '540,000.00', 'Guide Price', 'pandan jaya', '56', '23.12', '5', '5', '0145091646', '345.8', '345.8', 'saya nak renovate rumah ni so macam mana saya nk buat or contact siapa tuk renovate rumah');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
