@@ -1,59 +1,33 @@
+<?php 
+	include 'header.php'
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Search Bar using PHP</title>
-</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JS Example</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>	
 <body>
+     <center>
 
-<form method="post">
-<label>Search</label>
-<input type="text" name="search">
-<input type="submit" name="submit"> </br>
-<a> droup ID here ! </a>
-	
-</form>
+	<br>
+	<div class="container" style="width:900px;">
+   <h2 align="center">JSON Data Search Ber</h2>
+	<input type="text" size="100" id="name" name="name" value="" onkeyup="search()">
+	<input type="button" name="" value="Search" onclick="search()">
 
+	<div id="div1">
+		
+	</div>
+	</br>
+	<a href="home.php">Back </a> |
+	</center>
+
+	<script type="text/javascript" src="searchScript.js"></script>
 </body>
 </html>
-
-<?php
-
-$con = new PDO("mysql:host=localhost;dbname=webtech",'root','');
-
-if (isset($_POST["submit"])) {
-	$str = $_POST["search"];
-	$sth = $con->prepare("SELECT * FROM `users` WHERE id = '$str'");
-
-	$sth->setFetchMode(PDO:: FETCH_OBJ);
-	$sth -> execute();
-
-	if($row = $sth->fetch())
-	{
-		?>
-		<br><br><br>
-		<table>
-		
-			<tr>
-				<th>Name</th>
-				<th>Password</th>
-				<th>email</th>
-			</tr>
-			<tr>
-				<td><?php echo $row->username; ?></td>
-				<td><?php echo $row->password;?></td>
-				<td><?php echo $row->email; ?></td>
-			</tr>
-
-		</table>
-<?php 
-	}
-		
-		
-		else{
-			echo "Name Does not exist";
-		}
-    require_once('userlist.php');
-
-}
-
-?>

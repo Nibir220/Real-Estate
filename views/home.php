@@ -133,6 +133,12 @@ footer {
        Aftabnagor, Block C, House 22, Rampura , Dhaka.
        PhoneNo: 01xxxxxxxx
        Email: fajlay.203@gmail.com </p>
+	   
+   <video width="700" autoplay muted>
+  <source src="../videos/wt.mp4" type="video/mp4">
+  <source src="../videos/wt.ogg" type="video/ogg">
+  Your browser does not support HTML video.
+</video>	   
    
    </article>
  </section>
